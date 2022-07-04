@@ -7,4 +7,5 @@ class Curso(models.Model):
     calificacion = models.PositiveSmallIntegerField()
     
     def __str__(self):
-        return self.nombre
+       texto = '{0} ({1})'
+       return texto.format(self.nombre, self.calificacion)
